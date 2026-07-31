@@ -1,20 +1,22 @@
 /* ==========================================================================
    Scholz & Friese - Wir Mittelweser Landing Page Stylesheet
-   Theme: Open & Spacious Designer Layout (White Theme) - Mobile Optimized
-   Logo Blue Accent: #73BDE2 | Logo Brown: #503C35
+   Theme: Logo Brown (#503C35) Theme with High Contrast & Readability
+   Logo Blue Accent: #73BDE2
    ========================================================================== */
 
 :root {
-  /* Designer Light Palette */
-  --bg-page: #f9fafb;
+  /* Logo Brown Palette */
+  --bg-brown: #503c35;
+  --bg-brown-dark: #3a2a24;
+  --bg-brown-light: #634b42;
   
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-muted: #9ca3af;
+  --text-primary: #ffffff;
+  --text-secondary: #e6dad4;
+  --text-muted: #beadA5;
   
-  /* Exact Logo Colors */
-  --brand-blue: #73bde2;    /* Exact Logo Blue */
-  --brand-orange: #ea580c;  /* Stork Beak Orange */
+  /* Logo Accents */
+  --brand-blue: #73bde2;     /* Exact Logo Blue */
+  --brand-gold: #f59e0b;     /* Warm Amber Gold */
   --brand-brown: #503c35;
   
   /* Typography */
@@ -34,7 +36,7 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   font-family: var(--font-main);
-  background-color: var(--bg-page);
+  background-color: var(--bg-brown);
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -47,7 +49,7 @@ body {
   min-height: 100vh;
   justify-content: space-between;
   position: relative;
-  background: radial-gradient(circle at 50% 20%, #ffffff 0%, #f3f4f6 70%, #e5e7eb 100%);
+  background: radial-gradient(circle at 50% 30%, #5d463e 0%, #503c35 55%, #3c2c26 100%);
 }
 
 /* Subtle Ambiance Glows */
@@ -57,26 +59,26 @@ body {
   filter: blur(140px);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.25;
+  opacity: 0.3;
 }
 
 .bg-glow-1 {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(115, 189, 226, 0.25), transparent 70%);
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(115, 189, 226, 0.3), transparent 70%);
   top: -10%;
-  left: 30%;
+  left: 25%;
 }
 
 .bg-glow-2 {
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(234, 88, 12, 0.12), transparent 70%);
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.18), transparent 70%);
   bottom: -10%;
-  right: 25%;
+  right: 20%;
 }
 
-/* Main Container - Open & Airy Layout */
+/* Main Container */
 .hero-container {
   position: relative;
   z-index: 10;
@@ -85,101 +87,75 @@ body {
   align-items: center;
   justify-content: center;
   flex: 1;
-  padding: 4rem 1.5rem;
+  padding: 3.5rem 1.5rem;
   width: 100%;
-  max-width: 860px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
   gap: 2.25rem;
 }
 
-/* Status Badge */
-.status-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  padding: 0.45rem 1.25rem;
-  border-radius: 9999px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-}
-
-.status-pulse {
-  width: 8px;
-  height: 8px;
-  background-color: var(--brand-blue);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--brand-blue);
-}
-
-/* Logo Display - Framed Emblem Badge */
+/* Logo Display - Bigger & Seamlessly Blended */
 .logo-wrapper {
   position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 0.75rem;
-  background: var(--brand-brown);
-  border-radius: 24px;
-  box-shadow: 
-    0 16px 36px -8px rgba(80, 60, 53, 0.3),
-    0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  padding: 0.5rem;
+  background: transparent;
   max-width: 100%;
+  transition: transform 0.3s ease;
 }
 
 .logo-wrapper:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .main-logo {
-  max-width: 440px;
+  max-width: 540px;
   width: 100%;
   height: auto;
   object-fit: contain;
   display: block;
-  border-radius: 14px;
+  border-radius: 12px;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
 }
 
-/* Slogan - Bold, Mobile Responsive Typography */
+/* Slogan - High Contrast & Large */
 .slogan {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 6.5vw, 4rem);
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.025em;
-  color: var(--text-primary);
+  color: #ffffff;
   word-break: break-word;
 }
 
 .highlight-wir {
   color: var(--brand-blue);
+  text-shadow: 0 2px 16px rgba(115, 189, 226, 0.4);
 }
 
 .highlight-dir {
-  color: var(--brand-brown);
+  color: var(--brand-gold);
+  text-shadow: 0 2px 16px rgba(245, 158, 11, 0.4);
 }
 
-/* Announcement Block - Airy Spacing */
+/* Announcement Block */
 .announcement {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
-  max-width: 640px;
+  max-width: 660px;
   width: 100%;
   padding: 0 0.5rem;
 }
 
 .announcement-text {
-  font-size: clamp(1.1rem, 3.5vw, 1.45rem);
+  font-size: clamp(1.15rem, 3.2vw, 1.5rem);
   font-weight: 700;
-  color: var(--text-primary);
+  color: #ffffff;
   line-height: 1.35;
 }
 
@@ -189,7 +165,7 @@ body {
 }
 
 .announcement-sub {
-  font-size: clamp(0.92rem, 2.8vw, 1.05rem);
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   color: var(--text-secondary);
   font-weight: 400;
   line-height: 1.6;
@@ -223,13 +199,14 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 14px;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-secondary);
+  color: #ffffff;
   text-decoration: none;
   transition: all 0.25s ease;
   -webkit-tap-highlight-color: transparent;
@@ -239,8 +216,8 @@ body {
   width: 22px;
   height: 22px;
   stroke-width: 2;
-  color: var(--text-secondary);
-  transition: color 0.25s ease, transform 0.25s ease;
+  color: #ffffff;
+  transition: transform 0.25s ease;
 }
 
 .social-link.instagram:hover,
@@ -248,25 +225,15 @@ body {
   background: var(--brand-blue);
   border-color: var(--brand-blue);
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(115, 189, 226, 0.35);
-}
-
-.social-link.instagram:hover .icon,
-.social-link.instagram:active .icon {
-  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(115, 189, 226, 0.4);
 }
 
 .social-link.facebook:hover,
 .social-link.facebook:active {
-  background: var(--brand-brown);
-  border-color: var(--brand-brown);
+  background: var(--brand-gold);
+  border-color: var(--brand-gold);
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(80, 60, 53, 0.35);
-}
-
-.social-link.facebook:hover .icon,
-.social-link.facebook:active .icon {
-  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
 }
 
 /* Footer Styling */
@@ -275,8 +242,10 @@ body {
   z-index: 10;
   width: 100%;
   padding: 1.5rem 1rem;
-  background: #ffffff;
-  border-top: 1px solid #e5e7eb;
+  background: rgba(45, 33, 29, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .footer-content {
@@ -297,7 +266,7 @@ body {
 }
 
 .agency-link {
-  color: var(--text-primary);
+  color: #ffffff;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -315,37 +284,38 @@ body {
 }
 
 .footer-btn {
-  background: none;
-  border: none;
-  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
   font-family: inherit;
   font-size: 0.88rem;
   font-weight: 500;
   cursor: pointer;
-  padding: 0.35rem 0.75rem;
+  padding: 0.35rem 0.85rem;
   border-radius: 8px;
-  transition: color 0.2s ease, background 0.2s ease;
+  transition: all 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
 .footer-btn:hover,
 .footer-btn:active {
   color: var(--brand-blue);
-  background: #f3f4f6;
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(115, 189, 226, 0.4);
 }
 
 .footer-sep {
-  color: #d1d5db;
+  color: rgba(255, 255, 255, 0.25);
 }
 
-/* Modal Dialog Windows */
+/* Modal Dialog Windows (Dark Brown Theme for High Contrast) */
 .modal-overlay {
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: rgba(17, 24, 39, 0.5);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(25, 18, 15, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -364,12 +334,12 @@ body {
   width: 100%;
   max-width: 620px;
   max-height: 85vh;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: #3e2d27;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 24px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
   transform: translateY(16px);
   transition: transform 0.3s ease;
   overflow: hidden;
@@ -381,11 +351,11 @@ body {
 
 .modal-header {
   padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f9fafb;
+  background: #342520;
 }
 
 .modal-title-wrap {
@@ -402,13 +372,13 @@ body {
 
 .modal-header h2 {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
 .modal-close {
-  background: #e5e7eb;
+  background: rgba(255, 255, 255, 0.1);
   border: none;
   width: 36px;
   height: 36px;
@@ -416,23 +386,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-secondary);
+  color: #ffffff;
   cursor: pointer;
   transition: all 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
 .modal-close:hover {
-  background: #d1d5db;
-  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.22);
 }
 
 .modal-body {
   padding: 1.5rem;
   overflow-y: auto;
-  color: var(--text-secondary);
+  color: #f1e8e3;
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.65;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -446,14 +415,14 @@ body {
 }
 
 .impressum-block {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
   padding: 1.25rem;
 }
 
 .impressum-block h3 {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--brand-blue);
@@ -463,8 +432,8 @@ body {
 
 .company-title {
   font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--text-primary);
+  font-size: 1.1rem;
+  color: #ffffff;
   margin-bottom: 0.3rem;
 }
 
@@ -483,7 +452,7 @@ body {
 }
 
 .map-link {
-  color: var(--text-primary);
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -501,7 +470,7 @@ body {
 }
 
 .contact-list a {
-  color: var(--text-primary);
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
 }
@@ -513,7 +482,7 @@ body {
 .executives {
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
 .legal-text h3 {
@@ -530,15 +499,15 @@ body {
 
 .modal-footer {
   padding: 1rem 1.5rem;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: flex-end;
-  background: #f9fafb;
+  background: #342520;
 }
 
 .modal-btn-close {
-  background: var(--text-primary);
-  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
   font-family: inherit;
   font-weight: 600;
@@ -551,7 +520,7 @@ body {
 }
 
 .modal-btn-close:hover {
-  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* Mobile Responsiveness Optimizations */
@@ -561,19 +530,12 @@ body {
     gap: 1.75rem;
   }
 
-  .logo-wrapper {
-    padding: 0.5rem;
-    border-radius: 18px;
-    max-width: 320px;
-  }
-
   .main-logo {
-    max-width: 100%;
-    border-radius: 10px;
+    max-width: 360px;
   }
 
   .slogan {
-    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    font-size: clamp(1.8rem, 8.5vw, 2.8rem);
     line-height: 1.25;
   }
 
@@ -595,33 +557,10 @@ body {
     border-radius: 24px 24px 0 0;
     border-bottom: none;
   }
-
-  .modal-header {
-    padding: 1.1rem 1.25rem;
-  }
-
-  .modal-body {
-    padding: 1.25rem;
-    gap: 1rem;
-  }
-
-  .impressum-block {
-    padding: 1rem;
-  }
 }
 
 @media (max-width: 380px) {
-  .hero-container {
-    padding: 2rem 0.85rem;
-    gap: 1.5rem;
-  }
-
-  .status-badge {
-    padding: 0.35rem 0.9rem;
-    font-size: 0.75rem;
-  }
-
-  .logo-wrapper {
-    max-width: 270px;
+  .main-logo {
+    max-width: 300px;
   }
 }
