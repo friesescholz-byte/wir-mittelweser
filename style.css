@@ -1,0 +1,558 @@
+/* ==========================================================================
+   Scholz & Friese - Wir Mittelweser Landing Page Stylesheet
+   Theme: Open & Spacious Designer Layout (White Theme)
+   Logo Blue Accent: #73BDE2
+   ========================================================================== */
+
+:root {
+  /* Designer Light Palette */
+  --bg-page: #f9fafb;
+  
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  
+  /* Exact Logo Colors */
+  --brand-blue: #73bde2;    /* Exact Logo Blue */
+  --brand-orange: #ea580c;  /* Stork Beak Orange */
+  --brand-brown: #503c35;
+  
+  /* Typography */
+  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-main);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  position: relative;
+  background: radial-gradient(circle at 50% 20%, #ffffff 0%, #f3f4f6 70%, #e5e7eb 100%);
+}
+
+/* Subtle Ambiance Glows */
+.bg-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.25;
+}
+
+.bg-glow-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(115, 189, 226, 0.25), transparent 70%);
+  top: -10%;
+  left: 30%;
+}
+
+.bg-glow-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.12), transparent 70%);
+  bottom: -10%;
+  right: 25%;
+}
+
+/* Main Container - Open & Airy Layout (No Boxed Card) */
+.hero-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 4rem 1.5rem;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  gap: 2.5rem;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 0.45rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.status-pulse {
+  width: 8px;
+  height: 8px;
+  background-color: var(--brand-blue);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--brand-blue);
+}
+
+/* Logo Display - Framed Emblem Badge */
+.logo-wrapper {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--brand-brown);
+  border-radius: 24px;
+  box-shadow: 
+    0 16px 36px -8px rgba(80, 60, 53, 0.3),
+    0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.logo-wrapper:hover {
+  transform: translateY(-3px);
+}
+
+.main-logo {
+  max-width: 440px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 14px;
+}
+
+/* Slogan - Bold, Free-standing */
+.slogan {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+.highlight-wir {
+  color: var(--brand-blue);
+}
+
+.highlight-dir {
+  color: var(--brand-brown);
+}
+
+/* Announcement Block - Airy Spacing */
+.announcement {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  max-width: 640px;
+}
+
+.announcement-text {
+  font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.brand-name {
+  color: var(--brand-blue);
+  font-weight: 700;
+}
+
+.announcement-sub {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Social Media Row */
+.social-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.social-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-link .icon {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2;
+  color: var(--text-secondary);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.social-link.instagram:hover {
+  background: var(--brand-blue);
+  border-color: var(--brand-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(115, 189, 226, 0.35);
+}
+
+.social-link.instagram:hover .icon {
+  color: #ffffff;
+}
+
+.social-link.facebook:hover {
+  background: var(--brand-brown);
+  border-color: var(--brand-brown);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(80, 60, 53, 0.35);
+}
+
+.social-link.facebook:hover .icon {
+  color: #ffffff;
+}
+
+/* Footer Styling */
+.site-footer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.footer-copy {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.agency-link {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.agency-link:hover {
+  color: var(--brand-blue);
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.footer-btn:hover {
+  color: var(--brand-blue);
+  background: #f3f4f6;
+}
+
+.footer-sep {
+  color: #d1d5db;
+}
+
+/* Modal Dialog Windows */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(17, 24, 39, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 620px;
+  max-height: 85vh;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(16px);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.modal-overlay.active .modal-card {
+  transform: translateY(0);
+}
+
+.modal-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9fafb;
+}
+
+.modal-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.modal-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--brand-blue);
+}
+
+.modal-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.modal-close {
+  background: #e5e7eb;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: #d1d5db;
+  color: var(--text-primary);
+}
+
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.impressum-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.impressum-block {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.impressum-block h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brand-blue);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.company-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.address-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.inline-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--brand-blue);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.map-link {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contact-list a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-list a:hover {
+  color: var(--brand-blue);
+}
+
+.executives {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.legal-text h3 {
+  font-size: 1.05rem;
+  color: var(--brand-blue);
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+.legal-text a {
+  color: var(--brand-blue);
+  text-decoration: underline;
+}
+
+.modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+  background: #f9fafb;
+}
+
+.modal-btn-close {
+  background: var(--text-primary);
+  border: none;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-btn-close:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .hero-container {
+    padding: 2.5rem 1.25rem;
+    gap: 2rem;
+  }
+
+  .main-logo {
+    max-width: 300px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}

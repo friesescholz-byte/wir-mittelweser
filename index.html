@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wir Mittelweser – Wir sind WiR, nur mit DIR!</title>
+  <meta name="description" content="Hier entsteht die neue Website von Wir Mittelweser." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Ambient background elements -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <!-- Main Container (Open Layout) -->
+  <main class="hero-container">
+    
+    <!-- Status Badge -->
+    <div class="status-badge">
+      <span class="status-pulse"></span>
+      <span class="status-text">In Vorbereitung</span>
+    </div>
+
+    <!-- Logo Badge -->
+    <div class="logo-wrapper">
+      <img 
+        src="https://pub-b33108412309406a9a941ddc51e9a5b9.r2.dev/Wir%20Mittelweser/Wir_Mittelweser_Logo.webp" 
+        alt="Wir Mittelweser Logo" 
+        class="main-logo"
+        id="mainLogo"
+        loading="eager"
+        onerror="this.onerror=null; this.src='https://placehold.co/440x180/503c35/ffffff?text=Wir+Mittelweser';"
+      />
+    </div>
+
+    <!-- Slogan -->
+    <h1 class="slogan">
+      Wir sind <span class="highlight-wir">WiR</span>, nur mit <span class="highlight-dir">DIR!</span>
+    </h1>
+
+    <!-- Subline / Announcement -->
+    <div class="announcement">
+      <p class="announcement-text">
+        Hier entsteht die neue Website von <span class="brand-name">Wir Mittelweser</span>
+      </p>
+      <p class="announcement-sub">
+        Freuen Sie sich auf aktuelle Infos, regionale Geschichten & beste Unterhaltung für die Mittelweser-Region.
+      </p>
+    </div>
+
+    <!-- Social Media Section -->
+    <div class="social-section">
+      <span class="social-label">Folgen Sie uns</span>
+      <div class="social-icons">
+        <a 
+          href="https://www.instagram.com/wir.mittelweser/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="social-link instagram"
+          aria-label="Instagram"
+          title="Instagram - @wir.mittelweser"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+          </svg>
+        </a>
+        <a 
+          href="https://www.facebook.com/RadioMittelweser/?locale=de_DE" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="social-link facebook"
+          aria-label="Facebook"
+          title="Facebook - Radio Mittelweser"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-copy">
+        &copy; <span id="currentYear">2026</span> <strong>Wir Mittelweser</strong> by <a href="https://scholz-friese-webdesign.de/" target="_blank" rel="noopener noreferrer" class="agency-link">Scholz &amp; Friese Webdesign</a>
+      </div>
+      <div class="footer-nav">
+        <button type="button" class="footer-btn" id="openImpressum">Impressum</button>
+        <span class="footer-sep">•</span>
+        <button type="button" class="footer-btn" id="openDatenschutz">Datenschutzerklärung</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal: Impressum -->
+  <div class="modal-overlay" id="modalImpressum" aria-hidden="true" role="dialog" aria-labelledby="impressumTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="modal-icon">
+            <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+            <path d="M9 22v-4h6v4"/>
+            <path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/>
+            <path d="M12 10h.01"/><path d="M12 14h.01"/>
+            <path d="M16 10h.01"/><path d="M16 14h.01"/>
+            <path d="M8 10h.01"/><path d="M8 14h.01"/>
+          </svg>
+          <h2 id="impressumTitle">Impressum</h2>
+        </div>
+        <button type="button" class="modal-close" id="closeImpressum" aria-label="Schließen">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="impressum-grid">
+          <div class="impressum-block">
+            <h3>Diensteanbieter & Medieninhaber</h3>
+            <p class="company-title">Radio Nienburg Mittelweser GmbH</p>
+            <p class="address-line">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <a href="https://maps.app.goo.gl/fuLbTiZYFJJaXzSCA" target="_blank" rel="noopener noreferrer" class="map-link">
+                Friedrich-Ludwig-Jahn-Straße 3<br />
+                31582 Nienburg
+              </a>
+            </p>
+          </div>
+
+          <div class="impressum-block">
+            <h3>Kontakt</h3>
+            <ul class="contact-list">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <span>Fon: <a href="tel:050214030">05021-4030</a></span>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+                <span>E-Mail: <a href="mailto:eg@radiomw.de">eg@radiomw.de</a></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="impressum-block">
+            <h3>Handelsregister & Steuernummer</h3>
+            <p><strong>Registergericht:</strong> Amtsgericht Walsrode</p>
+            <p><strong>Registernummer:</strong> HRB 203937</p>
+            <p><strong>Steuernummer:</strong> 34/200/64766</p>
+          </div>
+
+          <div class="impressum-block">
+            <h3>Vertretungsberechtigte Geschäftsführer</h3>
+            <p class="executives">Eduardo Gordillo & Manuel Rasch</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="modal-btn-close" id="btnCloseImpressum">Schließen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Datenschutzerklärung -->
+  <div class="modal-overlay" id="modalDatenschutz" aria-hidden="true" role="dialog" aria-labelledby="datenschutzTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="modal-icon">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+          <h2 id="datenschutzTitle">Datenschutzerklärung</h2>
+        </div>
+        <button type="button" class="modal-close" id="closeDatenschutz" aria-label="Schließen">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body legal-text">
+        <h3>1. Datenschutz bei Wir Mittelweser</h3>
+        <p>
+          Wir freuen uns über Ihr Interesse an unserem Online-Angebot von <strong>Wir Mittelweser</strong>. Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Nachfolgend informieren wir Sie über die Verarbeitung Ihrer Daten.
+        </p>
+
+        <h3>2. Verantwortliche Stelle</h3>
+        <p>
+          <strong>Wir Mittelweser</strong><br />
+          Radio Nienburg Mittelweser GmbH<br />
+          Friedrich-Ludwig-Jahn-Straße 3<br />
+          31582 Nienburg<br />
+          E-Mail: <a href="mailto:eg@radiomw.de">eg@radiomw.de</a><br />
+          Telefon: 05021-4030
+        </p>
+
+        <h3>3. Datenerfassung auf unserer Website</h3>
+        <p>
+          Beim Aufrufen unserer Website werden durch den auf Ihrem Endgerät zum Einsatz kommenden Browser automatisch Informationen an den Server von <strong>Wir Mittelweser</strong> gesendet. Diese Informationen werden temporär in einem Logfile gespeichert (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, Name und URL der abgerufenen Datei). Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO zur Gewährleistung eines reibungslosen Verbindungsaufbaus und einer komfortablen Nutzung.
+        </p>
+
+        <h3>4. Cookies &amp; Lokale Speicherung</h3>
+        <p>
+          Unsere Website verwendet ausschließlich technisch notwendige Cookies bzw. lokale Speichertechnologien. Diese dienen dazu, die Funktionsfähigkeit und Sicherheit unseres Internetauftritts zu gewährleisten (Art. 6 Abs. 1 lit. f DSGVO). Es werden keine Tracking- oder Werbe-Cookies von Drittanbietern eingesetzt. Sie können die Speicherung von Cookies jederzeit über Ihre Browsereinstellungen einschränken oder deaktivieren.
+        </p>
+
+        <h3>5. Ihre Rechte</h3>
+        <p>
+          Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen können Sie sich jederzeit unter den im Impressum angegebenen Kontaktdaten an <strong>Wir Mittelweser</strong> wenden.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="modal-btn-close" id="btnCloseDatenschutz">Schließen</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
