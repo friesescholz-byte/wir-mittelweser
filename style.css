@@ -109,6 +109,11 @@ body {
   word-break: break-word;
 }
 
+.slogan-line-1,
+.slogan-line-2 {
+  display: inline;
+}
+
 .highlight-wir {
   color: var(--brand-blue);
   text-shadow: 0 2px 16px rgba(115, 189, 226, 0.4);
@@ -502,6 +507,11 @@ body {
 
 /* Mobile Responsiveness Optimizations */
 @media (max-width: 640px) {
+  .slogan-line-1,
+  .slogan-line-2 {
+    display: block;
+  }
+
   .hero-container {
     padding: 2.5rem 1rem;
     gap: 1.75rem;
