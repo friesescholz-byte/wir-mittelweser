@@ -1,6 +1,6 @@
 /* ==========================================================================
    Scholz & Friese - Wir Mittelweser Landing Page Stylesheet
-   Theme: Exact Logo Brown (#503C35) Theme with Seamless Logo Integration
+   Theme: Exact Logo Brown (#503C35) Flat Solid Theme
    Logo Blue: #73BDE2 | Stork Orange: #E55A22
    ========================================================================== */
 
@@ -31,7 +31,7 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   font-family: var(--font-main);
-  background-color: var(--brand-brown);
+  background-color: #503c35 !important;
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -44,33 +44,12 @@ body {
   min-height: 100vh;
   justify-content: space-between;
   position: relative;
-  background-color: #503c35; /* Solid exact logo brown so image blends 100% seamlessly */
+  background: #503c35 !important; /* Flat solid background, zero gradients for 100% seamless blend */
 }
 
-/* Ambient Glows */
+/* Hide background glows to prevent color variance behind image */
 .bg-glow {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(160px);
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.22;
-}
-
-.bg-glow-1 {
-  width: 650px;
-  height: 650px;
-  background: radial-gradient(circle, rgba(115, 189, 226, 0.35), transparent 70%);
-  top: -10%;
-  left: 25%;
-}
-
-.bg-glow-2 {
-  width: 550px;
-  height: 550px;
-  background: radial-gradient(circle, rgba(229, 90, 34, 0.25), transparent 70%);
-  bottom: -10%;
-  right: 20%;
+  display: none !important;
 }
 
 /* Main Container */
@@ -90,7 +69,7 @@ body {
   gap: 2.25rem;
 }
 
-/* Logo Display - Completely Seamless, No Box/Kachel */
+/* Logo Display - Completely Seamless, Inset Clip to remove image border line */
 .logo-wrapper {
   position: relative;
   display: inline-flex;
@@ -102,6 +81,7 @@ body {
   border: none;
   max-width: 100%;
   transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
 .logo-wrapper:hover {
@@ -114,8 +94,11 @@ body {
   height: auto;
   object-fit: contain;
   display: block;
-  border-radius: 0;
+  border: none;
   box-shadow: none;
+  /* Cut off 5px from image edges to remove any border line in the webp image */
+  clip-path: inset(5px);
+  -webkit-clip-path: inset(5px);
 }
 
 /* Slogan - High Contrast & Large */
