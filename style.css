@@ -6,7 +6,7 @@
 
 :root {
   /* Exact Logo Colors */
-  --brand-brown: #503c35;     /* Exact Logo Background Brown */
+  --brand-brown: #402417;     /* Deep Rich Brown */
   --brand-blue: #73bde2;      /* Exact Logo Blue */
   --brand-orange: #e55a22;    /* Exact Stork Orange */
   
@@ -31,7 +31,7 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   font-family: var(--font-main);
-  background-color: #503c35 !important;
+  background-color: #402417 !important;
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -44,7 +44,7 @@ body {
   min-height: 100vh;
   justify-content: space-between;
   position: relative;
-  background: #503c35 !important; /* Flat solid background, zero gradients for 100% seamless blend */
+  background: #402417 !important; /* Deep Rich Brown Background */
 }
 
 /* Hide background glows to prevent color variance behind image */
