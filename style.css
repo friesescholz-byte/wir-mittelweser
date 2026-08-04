@@ -227,6 +227,14 @@ body {
   box-shadow: 0 8px 20px rgba(229, 90, 34, 0.4);
 }
 
+.social-link.tiktok:hover,
+.social-link.tiktok:active {
+  background: var(--brand-blue);
+  border-color: var(--brand-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(115, 189, 226, 0.4);
+}
+
 /* Footer Styling */
 .site-footer {
   position: relative;
