@@ -139,6 +139,10 @@ body {
   display: block;
 }
 
+.announcement-line-2 {
+  white-space: nowrap;
+}
+
 .announcement-text {
   font-size: clamp(1.15rem, 3.2vw, 1.5rem);
   font-weight: 700;
